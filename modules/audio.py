@@ -6,7 +6,7 @@ from mutagen.mp3 import MP3
 class AudioEngine:
     def __init__(self):
         # Best Natural Indian Male Hindi Voice
-        self.voice = "hi-IN-MadhurNeural"
+        self.voice = "en-US-GuyNeural"
         self.output_dir = os.path.join(os.getcwd(), "assets", "audio_clips")
         os.makedirs(self.output_dir, exist_ok=True)
 
@@ -19,13 +19,13 @@ class AudioEngine:
                 communicate = edge_tts.Communicate(
                     text=text,
                     voice=self.voice,
-                    rate="+2%",      # Thoda fast for energy
-                    pitch="-3Hz",    # Masculine aur deep feel
-                    volume="+8%"
+                    rate="+8%",      # Thoda fast for energy
+                    pitch="+1Hz",    # Masculine aur deep feel
+                    volume="+10%"
                 )
                 
                 await communicate.save(output_path)
-                print(f"   ✅ Natural Hindi Male Voice (MadhurNeural) generated")
+                print(f"   ✅ Natural Eng Male Voice (en-US-GuyNeural) generated")
                 return output_path
            
             except Exception as e:

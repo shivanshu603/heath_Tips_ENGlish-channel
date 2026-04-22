@@ -59,7 +59,7 @@ CONTENT RULES:
 - Add 1 simple usage tip (how to consume)
 
 STYLE:
-- Language: Hinglish (natural spoken Hindi)
+- Language: Hinglish (natural spoken engish)
 - Start with strong hook (curiosity based)
 - Build fast-paced informative flow
 - End with engaging question or CTA
@@ -75,8 +75,8 @@ RETURN ONLY JSON:
 [
   {{
     "id": 1,
-    "title": "SEO friendly Hinglish title (food + benefit based)",
-    "text": "Full 40-55 sec Hinglish script",
+    "title": "SEO friendly english title (food + benefit based)",
+    "text": "Full 40-55 sec english script",
     "visual_1": "food close up cinematic",
     "visual_2": "cutting / preparation scene",
     "visual_3": "healthy lifestyle visuals",

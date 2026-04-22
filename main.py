@@ -68,7 +68,7 @@ async def create_one_short(short_number):
         print("❌ Failed to generate scenes")
         return False
 
-    # 5. Final Video
+    # 5. FINAL VIDEO (keep under 58 sec)
     composer.concatenate_with_transitions(final_scene_paths)
     clean_cache()
     print("✅ Short successfully created!")
@@ -77,12 +77,12 @@ async def create_one_short(short_number):
     print("🖼️ Generating Thumbnail...")
     thumbnail_gen = ThumbnailGenerator()
     thumbnail_path = thumbnail_gen.generate_thumbnail(
-        title=script_data[0].get('title', 'Ayurvedic Secret'),
+        title=script_data[0].get('title', 'Health Secret'),
         script_text=script_data[0].get('text', ''),
         short_number=short_number
     )
 
-    # 7. YOUTUBE UPLOAD with Thumbnail
+    # 7. YOUTUBE UPLOAD
     print("📤 Uploading to YouTube...")
 
     try:
@@ -92,20 +92,20 @@ async def create_one_short(short_number):
         scene = script_data[0] if isinstance(script_data, list) else script_data
         script_text = scene.get('text', 'Health Tip')
 
-        # Health & Ayurvedic Style Title
-        title = f"Ayurvedic Tips 😱 {script_text[:55]}... | Health Secret"
+        # 🔥 HIGH CTR TITLE (ENGLISH)
+        title = f"⚠️ Don’t Ignore This! {script_text[:45]}... | Health Tips #Shorts"
 
-        # Better Description for Health Niche
-        description = f"""🔥 आयुर्वेद का ये नुस्खा रोज इस्तेमाल करो
+        # 🔥 SEO OPTIMIZED DESCRIPTION
+        description = f"""⚠️ Important Health Tip You Should Know!
 
 {script_text[:300]}...
 
-🌿 Natural | Ayurvedic | No Side Effects
+💡 Daily Health & Wellness Tips
+🌿 Natural Remedies & Nutrition Advice
 
-👍 Like करो अगर फायदा लगे
-🔔 Subscribe करो रोज नई हेल्थ टिप्स के लिए
+👍 Like & Subscribe for more daily health tips!
 
-#Ayurveda #HealthTips #Nuskhe #NaturalRemedies #HindiHealth #DesiNuskhe #Wellness"""
+#HealthTips #Wellness #Nutrition #HealthyLiving #NaturalRemedies #Shorts"""
 
         video_path = "assets/final/final_short.mp4"
 
@@ -114,7 +114,16 @@ async def create_one_short(short_number):
             title=title[:100],
             description=description,
             thumbnail_path=thumbnail_path,
-            tags=["ayurveda", "health tips", "nuskhe", "natural remedies", "hindi health", "desi nuskhe", "ayurvedic secrets", "wellness"],
+            tags=[
+                "health tips",
+                "nutrition",
+                "healthy lifestyle",
+                "natural remedies",
+                "wellness tips",
+                "fitness tips",
+                "daily health",
+                "shorts health"
+            ],
             privacy="public"
         )
 
