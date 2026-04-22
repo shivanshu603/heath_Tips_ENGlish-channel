@@ -59,10 +59,10 @@ CONTENT RULES:
 - Add 1 simple usage tip (how to consume)
 
 STYLE:
-- Language: Hinglish (natural spoken engish)
-- Start with strong hook (curiosity based)
-- Build fast-paced informative flow
-- End with engaging question or CTA
+- Language: 100% English only
+- Use simple, clear spoken English (like a YouTube creator)
+- No Hindi or Hinglish words at all
+- Tone: engaging, slightly energetic, human-like
 
 STRUCTURE:
 Hook → Benefits → Usage → Ending
